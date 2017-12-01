@@ -1,0 +1,470 @@
+/* Universal Styles */
+
+html {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Header Styles */
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: hsla(125, 15%, 52%, 1);
+}
+
+header .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /*border: 1px solid gold; /* Container Border */
+  width: 80%;
+  padding: 0 1.5rem;
+  height: 4rem;
+  color: hsla(125, 15%, 73%, 1);
+}
+
+header h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+header h3 span {
+  font-weight: 600;
+  color: black;
+}
+
+header .container li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+header .container li:last-child {
+  margin-right: 0;
+}
+
+header h3 {
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1140px) {
+  header .container {
+    width: 100%;
+  }
+}
+
+header li:hover {
+  color: black;
+  -webkit-transition: color 400ms ease-out 50ms;
+  transition: color 400ms ease-out 50ms;
+}
+
+/* Main Section Styles */
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.box .container {
+  display: flex;
+  /*border: 1px solid gold; /* Container Border */
+  width: 80%;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (max-width: 1140px) {
+  .box .container {
+    width: 100%;
+  }
+}
+
+/* Box One and Two and Thesis Styles */
+
+.box .left {
+  width: 60%;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.box .left img {
+  width: 100%;
+}
+
+.box .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Box One ONLY Styles */
+
+.box.one {
+  background-color: hsla(45, 41%, 60%, 1);
+}
+
+.box.one .right h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.box.one .right {
+  padding-left: 1.5rem;
+}
+
+.box.one .right .button {
+  background-color: hsla(125, 15%, 52%, 1);
+  color: black;
+  text-align: center;
+  padding: .75rem 0;
+}
+
+.box.one .right h1, .box.one .right p {
+  margin-bottom: 1.5rem;
+  max-width: 290px;
+  line-height: 1.2;
+  color: hsla(45, 41%, 30%, 1);
+  font-weight: 900;
+}
+
+@media only screen and (min-width: 678px) {
+  .box.one .right .button:hover {
+    background-color: hsla(45, 41%, 30%, 1);
+    color: hsla(45, 41%, 60%, 1);
+    border-radius: 1.5rem;
+    -webkit-transition: all 400ms ease-out 75ms;
+    transition: all 400ms ease-out 75ms;
+  }
+}
+
+/* Box Two ONLY Styles (....& some styles for Box Thesis....)*/
+
+.box.two {
+  background-color: hsla(45, 41%, 50%, 1);
+}
+
+.box.thesis .left, .box.two .left {
+  flex-direction: column;
+  align-items: flex-start;
+  color: hsla(45, 41%, 20%, 1);
+}
+
+.box.two .left h2 {
+  margin: 2rem 0 1.5rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.box.thesis .left p, .box.two .left p {
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.box.two .left p.byline {
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1140px) {
+  .box.thesis .left, .box.two .left {
+    width: 50%;
+  }
+}
+
+/* Sidebar Styles (inside box two AND box thesis) */
+
+.box.thesis .right .sidebar, .box.two .right .sidebar {
+  display: flex;
+  width: 100%;
+  margin-left: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid hsla(45, 41%, 70%, 1);
+  color: hsla(45, 41%, 20%, 1);
+}
+
+.box.thesis .right, .box.two .right {
+  width: 40%;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+
+.box.thesis .sidebar img, .box.two .sidebar img {
+  width: 35%;
+  height: 100%;
+}
+
+.box.thesis .sidebar .info, .box.two .sidebar .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+}
+
+.box.thesis .sidebar h4, .box.thesis .sidebar p, .box.two .sidebar h4, .box.two .sidebar p {
+  padding-left: 1rem;
+}
+
+.box.thesis .sidebar h4, .box.two .sidebar h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: .75rem;
+  line-height: 1.2;
+}
+
+.box.thesis .sidebar p, .box.two .sidebar p {
+  padding-bottom: .75rem;
+  line-height: 1.2;
+}
+
+.box.thesis .sidebar p.read_more, .box.two .sidebar p.read_more {
+  /* Eliminates Padding on Red More link */
+  padding-bottom: 0;
+  font-size: .85rem;
+  color: hsla(45, 41%, 70%, 1);
+  text-decoration: underline;
+}
+
+.box.two .right .sidebar:last-child {
+  background-color: hsla(125, 15%, 52%, 1);
+  color: black;
+  border-bottom: none;
+}
+
+.box.two .right .sidebar:last-child p.read_more {
+  color: hsla(125, 15%, 73%, 1);
+}
+
+@media only screen and (min-width: 678px) {
+  .box.two .right .sidebar:hover {
+    background-color: hsla(45, 41%, 60%, 1);
+    border-radius: 1.5rem;
+    -webkit-transition: all 400ms ease-out 75ms;
+    transition: all 400ms ease-out 75ms;
+  }
+  .box.two .right .sidebar:last-child:hover {
+    background-color: hsla(45, 41%, 40%, 1);
+  }
+  .box.two .right .sidebar:last-child:hover>.info p.read_more {
+    color: hsla(45, 41%, 70%, 1);
+  }
+  .box.two .right .sidebar:hover>img {
+    border-radius: 1rem;
+    -webkit-transition: all 400ms ease-out 75ms;
+    transition: all 400ms ease-out 75ms;
+  }
+  .box.two .right .sidebar:hover>.info p.read_more {
+    color: hsla(45, 41%, 80%, 1);
+    -webkit-transition: all 400ms ease-out 75ms;
+    transition: all 400ms ease-out 75ms;
+  }
+}
+
+/* Box Start_Learning Styles */
+
+.box.start_learning {
+  background-color: hsla(45, 41%, 40%, 1);
+}
+
+.box.start_learning .container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.box.start_learning h2 {
+  margin: 2rem 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: hsla(45, 41%, 20%, 1);
+}
+
+.box.start_learning #subject_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.box.start_learning .subject_box {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  margin: 1rem;
+  background-color: hsla(45, 41%, 60%, 1);
+  border: 1px solid hsla(45, 41%, 60%, 1);
+  color: hsla(45, 41%, 30%, 1);
+}
+
+.box.start_learning .subject_box img {
+  width: 100%;
+  height: auto;
+}
+
+.box.start_learning .subject_box h4 {
+  padding: 1rem 1rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: hsla(45, 41%, 20%, 1);
+}
+
+.box.start_learning .subject_box p {
+  padding: .5rem 1rem;
+  line-height: 1.2;
+}
+
+.box.start_learning .subject_box p:last-child {
+  padding-top: 0;
+}
+
+@media only screen and (min-width: 678px) {
+  .box.start_learning .subject_box:hover {
+    border-radius: 1.5rem;
+    background-color: hsla(125, 15%, 52%, 1);
+    border: 1px solid hsla(125, 15%, 52%, 1);
+    color: hsla(125, 15%, 73%, 1);
+    -webkit-transition: all 400ms ease-out 75ms;
+    transition: all 400ms ease-out 75ms;
+  }
+  .box.start_learning .subject_box:hover>img {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    -webkit-transition: all 400ms ease-out 75ms;
+    transition: all 400ms ease-out 75ms;
+  }
+  .box.start_learning .subject_box:hover>h4 {
+    color: black;
+    -webkit-transition: all 400ms ease-out 75ms;
+    transition: all 400ms ease-out 75ms;
+  }
+}
+
+/* Box Thesis Styles */
+
+.box.thesis {
+  background-color: hsla(45, 41%, 30%, 1);
+}
+
+.box.thesis .container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.box.thesis h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 2rem 0 2rem 0;
+  color: hsla(45, 41%, 10%, 1);
+}
+
+.box.thesis #full {
+  display: flex;
+}
+
+.box.thesis .left {
+  /*overriding rules found in box 2 sidebar section*/
+  margin: 0;
+}
+
+.box.thesis .left video {
+  width: 100%;
+  height: auto;
+}
+
+.box.thesis .left h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+  color: hsla(45, 41%, 10%, 1);
+}
+
+.box.thesis .left p {
+  /*overriding rules found in box 2 sidebar section*/
+  color: hsla(45, 41%, 10%, 1);
+}
+
+/* Sidebar Styles (inside box Thesis) */
+
+.box.thesis .right .sidebar {
+  /*overriding rules found in box 2 sidebar section*/
+  color: hsla(45, 41%, 10%, 1);
+  border-bottom: 1px solid hsla(45, 41%, 50%, 1);
+}
+
+.box.thesis .sidebar p.read_more {
+  /*overriding rules found in box 2 sidebar section*/
+  color: hsla(45, 41%, 50%, 1);
+}
+
+.box.thesis .right {
+  justify-content: flex-start;
+  /*overriding rules found in box 2 sidebar section*/
+  margin: 0;
+}
+
+.box.thesis .sidebar:hover {
+  background-color: hsla(45, 41%, 40%, 1);
+  border-radius: 1.5rem;
+  -webkit-transition: all 400ms ease-out 75ms;
+  transition: all 400ms ease-out 75ms;
+}
+
+.box.thesis .sidebar:hover>img {
+  border-radius: 1rem;
+  -webkit-transition: all 400ms ease-out 75ms;
+  transition: all 400ms ease-out 75ms;
+}
+
+/* Footer Styles */
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: hsla(125, 15%, 52%, 1);
+  font-size: .85rem;
+  color: hsla(125, 15%, 73%, 1);
+}
+
+footer .container {
+  display: flex;
+  /*border: 1px solid gold; /* Container Border */
+  height: 4rem;
+  width: 80%;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem 0 1.5rem;
+}
+
+footer li {
+  display: inline-block;
+}
+
+footer li:first-child {
+  margin-right: 1rem;
+}
+
+footer p {
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1140px) {
+  footer .container {
+    width: 100%;
+  }
+}
+
+footer li:hover {
+  color: black;
+  -webkit-transition: color 400ms ease-out 50ms;
+  transition: color 400ms ease-out 50ms;
+}
